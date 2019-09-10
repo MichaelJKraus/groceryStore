@@ -6,6 +6,14 @@ const NAV_LIST = [
         name: 'home',
         link: 'index.html'
     },
+    {
+        name: 'Recipes',
+        link: 'recipes.html'
+    },
+    {
+        name: 'Coupons',
+        link: 'coupons.html'
+    },
     //Make two more
     {
         name: 'about',
