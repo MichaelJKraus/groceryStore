@@ -176,3 +176,24 @@ const addInventoryToDOM = function (list) {
 addInventoryToDOM(inventoryList);
 
 
+
+
+
+
+
+
+
+function tacoRecipe(meat, seasoning, vegetables, tortilla) {
+    this.meat = meat;
+    this.seasoning = seasoning;
+    this.vegetables = vegetables;
+    this.tortilla = tortilla;
+}
+
+tacoRecipe.prototype.prepIngredients = function () {
+    console.log(`Get two pounds of ${this.meat} and add to pan. In separate bowl, collect ${this.seasoning}. Make sure your ${this.vegetables} are ready by washing and cutting. Fry they tortilla on a hot skillet and fill with meat.`);
+}
+
+const asadaTaco = newTacoRecipe('Ground Beef', ['Garlic Powder', 'Salt', 'Pepper'], ['Lemon', 'Tomato', 'Lettuce'], 'Corn Tortilla');
+
+console.log(asadaTaco.prepIngredients());
