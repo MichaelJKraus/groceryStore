@@ -7,7 +7,7 @@
 * [√] - Create a global createElement function that will do just that and add some params that i know will be useful.
 
 * [] - CLASS WILL DO: Create Form function that will append to HTML to create the inventory that way(commented out the HTML in the index to help give you an idea)
-* [] - CLASS WILL DO: Create an alert that they succesfully stored that info into the inventory
+* [] - CLASS WILL DO: Create an alert that they successfully stored that info into the inventory
 */  
 
 //hardcode inventory list. I will provide three for you, add the rest
@@ -30,7 +30,7 @@ const inventorySchema = [
 const discount = function (price, percent) {
     return ((percent / 100) * price).toFixed(2);
 }
-//This functiont takes the discount amount and takes away from price to give you the discount price
+//This function takes the discount amount and takes away from price to give you the discount price
 const discountPrice = function (price, discountAmt) {
     const discountAmount = discount(price, discountAmt)
     return (price - discountAmount).toFixed(2) ;
@@ -121,7 +121,7 @@ const makeAttributes = function (element, ...attributes) {
     return element;
 }
 
-//create a function that will create the layout for each list, but before I can do that, I should make a glabl createElement w/ needed info for repeated use
+//create a function that will create the layout for each list, but before I can do that, I should make a label createElement w/ needed info for repeated use
 
 /*
 Visualize:
@@ -174,26 +174,3 @@ const addInventoryToDOM = function (list) {
 }
 //Remember that array full of the produce I, you created? Well, now it serves here to loop through and append to the container. Done.
 addInventoryToDOM(inventoryList);
-
-
-
-
-
-
-
-
-
-function tacoRecipe(meat, seasoning, vegetables, tortilla) {
-    this.meat = meat;
-    this.seasoning = seasoning;
-    this.vegetables = vegetables;
-    this.tortilla = tortilla;
-}
-
-tacoRecipe.prototype.prepIngredients = function () {
-    console.log(`Get two pounds of ${this.meat} and add to pan. In separate bowl, collect ${this.seasoning}. Make sure your ${this.vegetables} are ready by washing and cutting. Fry they tortilla on a hot skillet and fill with meat.`);
-}
-
-const asadaTaco = newTacoRecipe('Ground Beef', ['Garlic Powder', 'Salt', 'Pepper'], ['Lemon', 'Tomato', 'Lettuce'], 'Corn Tortilla');
-
-console.log(asadaTaco.prepIngredients());
